@@ -1,0 +1,34 @@
+package ${packageName};
+
+import lombok.Data;
+
+/**
+* Created by ${author} on ${date}.
+*/
+@Data
+public class ${className} {
+
+<%  for(i in intKeys){  %>
+    private int ${i};
+<% } %>
+
+<%  for(l in longKeys){  %>
+    private long ${l};
+<% } %>
+
+<%  for(d in doubleKeys){  %>
+    private double ${d};
+<% } %>
+
+<%  for(s in strKeys){  %>
+    private String ${s};
+<% } %>
+
+<%  for(o in objectMap){
+        var key = entry.key;
+        var value = entry.value;
+%>
+    private ${key} ${value};
+<% } %>
+
+}
